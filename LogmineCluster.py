@@ -1,29 +1,4 @@
-import sys  
-import re
-import datetime
-import getopt
-from splunklib.searchcommands import dispatch, EventingCommand, Configuration, Option, validators  
-
-@Configuration()  
-
-class testpython(EventingCommand):  
-    
-    mValue = Option(require=True, validate=validators.Integer())
-    def __init__( self ):
-        self.delimiters = "\\s"
-        self.clusters = []
-        self.k1 = 1
-        self.k2 = 0.5
-        self.contents = [] 
-        self.m = 0.15
-        self.match_award = 10
-        self.mismatch_penalty = 1
-        self.gap_penalty = 0
-        self.placeholder = '---'
-        self.listout = []
-        EventingCommand.__init__(self)
-        
-import sys  
+      import sys  
 import re
 import datetime
 import getopt
